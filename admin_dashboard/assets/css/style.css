@@ -1,0 +1,497 @@
+/* ===============================Google Fonts link===================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+/* ===================Global styles======================================== */
+* {
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: #0077b6;
+    --white: #f8f9fa;
+    --gray: #adb5bd;
+    --black1: #212529;
+    --black2: #343a40;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+/* ============================Navogation========================= */
+
+.navigation {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: var(--blue);
+    transition: 0.5s;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 100vh;
+}
+.navigation.active {
+    width: 70px;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.navigation ul li:hover,
+.navigation ul li.hovered {
+    background-color: var(--white);
+}
+
+.navigation ul li:nth-child(1) {
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+    z-index: 2;
+}
+
+.navigation ul li:hover a,
+.navigation ul li.hovered a {
+    color: var(--blue);
+}
+
+.navigation ul li .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 75px;
+    text-align: center;
+}
+
+.navigation ul li a .icon ion-icon {
+    font-size: 1.75rem;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+/* ===============================curve outside=============================== */
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--white);
+    pointer-events: none;
+}
+
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--white);
+    pointer-events: none;
+}
+
+/* ===================================MAIN============================= */
+.main {
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: var(--white);
+    transition: 0.5s;
+}
+
+.main.active {
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
+.topbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.search {
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+
+.search label {
+    position: relative;
+    width: 100%;
+}
+
+.search label input {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 32px;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid var(--black2);
+}
+
+.search label ion-icon {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 1.2rem;
+}
+
+.user {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.user img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* =====================================CARDS================================= */
+.cardBox {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.cardBox .card {
+    position: relative;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
+}
+
+.cardBox .card .numbers {
+    position: relative;
+    font-weight: 500;
+    font-size: 1.75rem;
+    color: var(--blue);
+}
+
+.cardBox .card .cardname {
+    color: var(--black1);
+    font-size: 1.2rem;
+}
+
+.cardBox .card .iconbox {
+    color: var(--black2);
+    font-size: 2.4rem;
+}
+
+.cardBox .card:hover {
+    background: var(--blue);
+}
+
+.cardBox .card:hover .numbers,
+.cardBox .card:hover .cardname,
+.cardBox .card:hover .iconbox {
+    color: var(--white);
+}
+/* =============================order details list======================== */
+
+.details{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+   
+}
+.details .recentOrders{
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    /* border: 3px solid black; */
+    background: var(--white);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+.details .cardHeader{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+.cardHeader h2{
+    font-weight: 600;
+    color: var(--blue);
+    text-align: center;
+}
+.cardHeader .btn{
+    position: relative;
+    padding: 10px 20px;
+    background: var(--blue);
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 6px;
+}
+.cardHeader .btn:hover{
+    background: var(--gray);
+        color: var(--white);
+}
+.details table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.details table thead td{
+    font-weight: 600;
+}
+.details .recentOrders table tr{
+    color: var(--black1);
+    border-bottom: 1px solid rgba(0, 0, 0,0.2);
+}
+.details .recentOrders table tr:last-child{
+    border-bottom: none;
+}
+.details .recentOrders table tr:hover{
+background: var(--blue);
+color: var(--white);
+}
+.details .recentOrders table tr td{
+    padding: 10px;
+}
+.details .recentOrders table tr td:last-child{
+    text-align: end;
+}
+.details .recentOrders table tr td:nth-child(2) {
+    text-align: end;
+}
+.details .recentOrders table tr td:nth-child(3) {
+    text-align: center;
+}
+.statusdelivered{
+padding: 2px 4px;
+background: #8de02c;
+color: var(--black1);
+border-radius: 4px;
+font-size: 14px;
+font-size: 500;
+}
+.statushipped{
+        padding: 2px 4px;
+        background: #e9b10a;
+        color: var(--black1);
+        border-radius: 4px;
+        font-size: 14px;
+        font-size: 500;
+    }
+    .statusprocessing{
+        padding: 2px 4px;
+            background: var(--blue);
+            color: var(--black1);
+            border-radius: 4px;
+            font-size: 14px;
+            font-size: 500;
+    }
+
+/* =======================================recent customers================================ */
+ .recentCustomer{
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    padding: 20px;
+    background: var(--white);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+ }
+ .recentCustomer .imgBx{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    overflow: hidden;
+ }
+  .recentCustomer .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+   .recentCustomer table tr:hover{
+    background: var(--blue);
+    color: var(--white);
+   }
+   .recentCustomer table tr td {
+    padding: 12px 10px;
+   }
+ .recentCustomer table tr td h4{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.4rem;
+ }
+ .recentCustomer table tr td span {
+    font-size: 14px;
+    color: var(--black1);
+ }
+  .recentCustomer table tr:hover td h4 span{
+    color: var(--white);
+  }
+
+/* ======================= Responsive Design ======================= */
+@media (max-width: 991px) {
+    .navigation {
+        left: -300px;
+    }
+
+    .navigation.active {
+        left: 0;
+        width: 250px;
+    }
+
+    .main {
+        width: 100%;
+        left: 0;
+    }
+
+    .main.active {
+        width: calc(100% - 250px);
+        left: 250px;
+    }
+
+    .cardBox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .details {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        width: 220px;
+    }
+
+    .navigation.active {
+        width: 70px;
+    }
+
+    .main {
+        width: 100%;
+        left: 0;
+    }
+   
+    .main.active {
+        width: calc(100% - 70px);
+        left: 70px;
+    }
+
+    .cardBox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .recentOrders{
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .navigation {
+        width: 200px;
+    }
+
+    .navigation.active {
+        width: 70px; 
+    }
+
+    .toggle {
+        font-size: 2rem;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .cardBox {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .details .recentOrders table {
+        font-size: 12px;
+    }
+
+    .details .recentCustomer table {
+        font-size: 12px;
+    }
+}

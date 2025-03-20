@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Dashboard Admin</title>
+    <!-- =====================link CSS==================== -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <!-- ===================Barra de navegación==================== -->
+    <div class="container">
+      <div class="navigation">
+        <ul>
+          <li>
+            <a href="#">
+              <span class="icon"><ion-icon name="logo-apple"></ion-icon></span>
+              <span class="title">Servicios del país</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><ion-icon name="home"></ion-icon></span>
+              <span class="title">Tablero</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><ion-icon name="people"></ion-icon></span>
+              <span class="title">Clientes</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><ion-icon name="logo-wechat"></ion-icon></span>
+              <span class="title">Mensajes</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><ion-icon name="help"></ion-icon></span>
+              <span class="title">Ayuda</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><ion-icon name="settings"></ion-icon></span>
+              <span class="title">Configuración</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+              <span class="title">Contraseña</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="icon"><ion-icon name="log-out"></ion-icon></span>
+              <span class="title">Cerrar sesión</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- ==========================PRINCIPAL============================= -->
+      <div class="main">
+        <div class="topbar">
+          <div class="toggle"><ion-icon name="menu-outline"></ion-icon></div>
+          <div class="search">
+            <label for="">
+              <input type="text" placeholder="Buscar aquí" />
+              <ion-icon name="search-outline"></ion-icon>
+            </label>
+          </div>
+          <div class="user">
+            <img src="assets/img/user-2.png" alt="" />
+          </div>
+        </div>
+        <!-- ========================TARJETAS===================== -->
+        <div class="cardBox">
+          <div class="card">
+            <div>
+              <div class="numbers">1,265</div>
+              <div class="cardname">Vistas Diarias</div>
+            </div>
+            <div class="iconbox">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+          </div>
+
+          <div class="card">
+            <div>
+              <div class="numbers">35</div>
+              <div class="cardname">Transacciones</div>
+            </div>
+            <div class="iconbox">
+              <ion-icon name="cart-outline"></ion-icon>
+            </div>
+          </div>
+
+          <div class="card">
+            <div>
+              <div class="numbers">76</div>
+              <div class="cardname">Comentarios</div>
+            </div>
+            <div class="iconbox">
+              <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+            </div>
+          </div>
+
+          <div class="card">
+            <div>
+              <div class="numbers">$6,205</div>
+              <div class="cardname">Beneficio</div>
+            </div>
+            <div class="iconbox">
+              <ion-icon name="cash-outline"></ion-icon>
+            </div>
+          </div>
+        </div>
+        <!-- ===========================Lista de detalles de pedidos========================= -->
+        <div class="details">
+          <div class="recentOrders">
+            <div class="cardHeader">
+              <h2 class="cardHeader">Últimos Pedidos</h2>
+              <a href="#" class="btn">Ver todos</a>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <td>Título</td>
+                  <td>Precio</td>
+                  <td>Pago</td>
+                  <td>Estado</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Monitor Philips</td>
+                  <td>$1299</td>
+                  <td>Payid</td>
+                  <td><span class="statusdelivered">Entregado</span></td>
+                </tr>
+                <tr>
+                  <td>Samsung TV</td>
+                  <td>$799</td>
+                  <td>Tarjeta de Crédito</td>
+                  <td><span class="statushipped">Enviado</span></td>
+                </tr>
+                <tr>
+                  <td>iPhone 13 de Apple</td>
+                  <td>$999</td>
+                  <td>PayPal</td>
+                  <td><span class="statusprocessing">Procesando</span></td>
+                </tr>
+                <tr>
+                  <td>MacBook Pro</td>
+                  <td>$2399</td>
+                  <td>Transferencia Bancaria</td>
+                  <td><span class="statusdelivered">Entregado</span></td>
+                </tr>
+                <tr>
+                  <td>Monitor Philips</td>
+                  <td>$1299</td>
+                  <td>Payid</td>
+                  <td><span class="statusdelivered">Entregado</span></td>
+                </tr>
+                <tr>
+                  <td>Samsung TV</td>
+                  <td>$799</td>
+                  <td>Tarjeta de Crédito</td>
+                  <td><span class="statushipped">Enviado</span></td>
+                </tr>
+                <tr>
+                  <td>iPhone 13 de Apple</td>
+                  <td>$999</td>
+                  <td>PayPal</td>
+                  <td><span class="statusprocessing">Procesando</span></td>
+                </tr>
+                <tr>
+                  <td>MacBook Pro</td>
+                  <td>$2399</td>
+                  <td>Transferencia Bancaria</td>
+                  <td><span class="statusdelivered">Entregado</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- ==========================Nuevo Cliente==================-->
+          <div class="recentCustomer">
+            <div class="cardHeader">
+              <h2 class="cardHeader">Clientes Recientes</h2>
+            </div>
+            <table>
+              <tr>
+                <td width="60px">
+                  <div class="imgBx">
+                    <img src="assets/img/user-4.png" alt="user-3" />
+                  </div>
+                </td>
+                <td><h4>Laura <br><span>Francia</span></td></h4>
+              </tr>
+                <tr>
+                <td width="60px">
+                  <div class="imgBx">
+                    <img src="assets/img/user-2.png" alt="user-2" />
+                  </div>
+                </td>
+                <td><h4>Mike <br><span>España</span></td></h4>
+              </tr>
+                <tr>
+                <td width="60px">
+                  <div class="imgBx">
+                    <img src="assets/img/user-3.png" alt="user-3" />
+                  </div>
+                </td>
+                <td><h4>Julia<br><span>Noruega</span></td></h4>
+              </tr>
+                <tr>
+                <td width="60px">
+                  <div class="imgBx">
+                    <img src="assets/img/user-2.png" alt="user-2" />
+                  </div>
+                </td>
+                <td><h4>Daniel <br><span>Canadá</span></td></h4>
+              </tr>
+                <tr>
+                <td width="60px">
+                  <div class="imgBx">
+                    <img src="assets/img/user-4.png" alt="user-3" />
+                  </div>
+                </td>
+                <td><h4>Sophia<br><span>Rumanía</span></td></h4>
+              </tr>
+                <tr>
+                <td width="60px">
+                  <div class="imgBx">
+                    <img src="assets/img/user-2.png" alt="user-2" />
+                  </div>
+                </td>
+                <td><h4>John <br><span>Inglaterra</span></td></h4>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ==========================Enlace Javascript===================== -->
+    <script src="assets/js/script.js"></script>
+    <!-- ============================IONICONS========================= -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
